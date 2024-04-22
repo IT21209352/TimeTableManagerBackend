@@ -1,5 +1,6 @@
 #  use this code to run the load test. but first paste the token in to the authtoken variable
 # artillery run tests/load_test.yaml
+# if cant run try npm i art again and disabling windows stric scriupt run
 config:
   target: "http://localhost:5000"
   phases:
