@@ -1,0 +1,108 @@
+#  use this code to run the load test. but first paste the token in to the authtoken variable
+# artillery run tests/load_test.yaml
+config:
+  target: "http://localhost:5000"
+  phases:
+    - duration: 60
+      arrivalRate: 10
+  variables:
+    authToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZTk3OTE0MWUzOWZkZWU5N2Y5N2E4ZCIsInR5cGUiOiJBZG1pbiIsImlhdCI6MTcxMDg1OTYzNSwiZXhwIjoxNzEwODY2ODM1fQ.KM9khgTYluQt6HU8VdpBSd3TQcy1Dc6BWz-1cjm99eM"
+          
+
+scenarios:
+  - name: "Add Course"
+    flow:
+      - post:
+          url: "/addcourse"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          json:
+            Name: "Course Name"
+            Code: "COURSE_CODE"
+            Credits: "3"
+            Description: "Course Description"
+            Duration: 10
+            Faculty: "Faculty Name"
+
+  - name: "Get Course Data"
+    flow:
+      - get:
+          url: "/getcoursedata"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+
+  - name: "Add Resource"
+    flow:
+      - post:
+          url: "/addresource"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          json:
+            Code: "RESOURCE_CODE"
+            Name: "Resource Name"
+            Availability: "Available"
+            Date: "2024-03-21"
+            StartTime: "09:00 AM"
+            EndTime: "12:00 PM"
+            Faculty: "Faculty Name"
+            Location: "Location Name"
+
+  - name: "Get Resource"
+    flow:
+      - get:
+          url: "/getresource"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+
+  - name: "Add Class Session"
+    flow:
+      - post:
+          url: "/addsession"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          json:
+            Course: "Course Name"
+            Date: "2024-03-21"
+            StartTime: "09:00 AM"
+            EndTime: "12:00 PM"
+            Faculty: "Faculty Name"
+            Location: "Location Name"
+
+  - name: "Get Class Sessions"
+    flow:
+      - get:
+          url: "/getsessions"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+
+  - name: "Get My Sessions"
+    flow:
+      - get:
+          url: "/getmysessions"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+
+
+  - name: "Sign Up"
+    flow:
+      - post:
+          url: "/signup"
+          json:
+            username: "TestUser"
+            email: "testuser@example.com"
+            password: "testpassword"
+
+  - name: "Log In"
+    flow:
+      - post:
+          url: "/login"
+          json:
+            email: "testuser@example.com"
+            password: "testpassword"
+
+  - name: "Get User Data"
+    flow:
+      - get:
+          url: "/getuserdata"
+          headers:
+            Authorization: "Bearer {{ authToken }}"

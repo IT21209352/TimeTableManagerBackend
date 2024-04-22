@@ -1,0 +1,821 @@
+{
+	"info": {
+		"_postman_id": "c4df96c0-3ab0-485e-be8b-4c563ef3f423",
+		"name": "AF Assingment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33713609"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Admin Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\":\"admin@gmail.com\",\r\n    \"Password\":\"111111\",\r\n    \"Type\":\"Admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\":\"fls@gmail.com\",\r\n    \"Password\":\"111111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin LogOut",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\":\"admin@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\":\"admin@gmail.com\",\r\n    \"Password\":\"111111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student LogOut",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\":\"fls@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/user/updateuser/${editUserId}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"updateuser",
+								"${editUserId}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove a User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/user/removeuser/${id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"removeuser",
+								"${id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All User Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/user/getuserdata",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"getuserdata"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Resources",
+			"item": [
+				{
+					"name": "Get all the resources",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/resource/getresource",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"resource",
+								"getresource"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Free a resource",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {      \r\n    \"Date\": \"2024-2-2\",\r\n    \"StartTime\": \"8.00\",\r\n    \"EndTime\": \"10.00\",\r\n    \"Location\": \"ClassRoom 2\",\r\n    \"Faculty\": \"Faculty of Computing\",\r\n    \"Operation\":\"free\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/resource/bookresource/65f96139c0d77ec060aca22e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"resource",
+								"bookresource",
+								"65f96139c0d77ec060aca22e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a resource",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {      \r\n    \"Code\": \"DS450\",\r\n    \"Name\": \"Digital Screen\",\r\n    \"Availability\": \"True\",\r\n    \"Date\": \"\",\r\n    \"StartTime\": \"\",\r\n    \"EndTime\": \"\",\r\n    \"Location\": \"ClassRoom 2\",\r\n    \"Faculty\": \"Faculty of Computing\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/resource/updateresource/65f96139c0d77ec060aca22e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"resource",
+								"updateresource",
+								"65f96139c0d77ec060aca22e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book a resource",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/resource/bookresource/65f96139c0d77ec060aca22e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"resource",
+								"bookresource",
+								"65f96139c0d77ec060aca22e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a Resource",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n\r\n            \"Code\": \"L5200\",\r\n            \"Name\": \"MSI\",\r\n            \"Availability\": \"True\",\r\n            \"Date\": \"\",\r\n            \"StartTime\": \"\",\r\n            \"EndTime\": \"\",\r\n            \"Location\": \"Classroom 1\",\r\n            \"Faculty\": \"Faculty of Business\",\r\n\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/resource/addresource",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"resource",
+								"addresource"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Resource",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/resource/deletesessions/65f96139c0d77ec060aca22e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"resource",
+								"deletesessions",
+								"65f96139c0d77ec060aca22e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "Delete a Course",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/course/removecourse/${id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"course",
+								"removecourse",
+								"${id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/course/getcoursedata",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"course",
+								"getcoursedata"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Course",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/course/updatecourse/${editCourseId}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"course",
+								"updatecourse",
+								"${editCourseId}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a new Course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n      \r\n        \"Name\": \"CNC Machinees\",\r\n        \"Code\": \"CN010\",\r\n        \"Credits\": \"16\",\r\n        \"Description\": \"A cnc machine course\",\r\n        \"Duration\": 40,\r\n        \"Faculty\": \"Faculty of Engineering\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/course/addcourse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"course",
+								"addcourse"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sessions",
+			"item": [
+				{
+					"name": "Get a Students Class Session according to enrolled modules",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/session/getmysessions?courses[0][_id]=65e9c7dd1e77b44666b728a2&courses[0][Name]=Computer+Networks&courses[0][Code]=CN4569&courses[0][Credits]=12&courses[0][Description]=A+Module+about+Computer+Networks&courses[0][Duration]=15&courses[0][__v]=0&courses[0][Faculty]=Faculty+of+Computing&courses[1][_id]=65e9c45f621810b1188a5992&courses[1][Name]=Mobile+Apps&courses[1][Code]=MA004&courses[1][Credits]=16&courses[1][Description]=A+mobile+application+course&courses[1][Duration]=40&courses[1][__v]=0&courses[1][Faculty]=Faculty+of+Business&courses[2][_id]=65e9c6191e77b44666b72893&courses[2][Name]=Cyber+Scequrity&courses[2][Code]=CS0005&courses[2][Credits]=20&courses[2][Description]=A+module+about+Cyber+Protection&courses[2][Duration]=30&courses[2][__v]=0&courses[2][Faculty]=Faculty+of+Computing&courses[3][_id]=65e9c63f1e77b44666b72898&courses[3][Name]=Application+Framework&courses[3][Code]=AF5506&courses[3][Credits]=10&courses[3][Description]=Application+and+their+Frameworks&courses[3][Duration]=25&courses[3][__v]=0&courses[3][Faculty]=Faculty+of+Business&courses[4][_id]=65e9c8901e77b44666b728b0&courses[4][Name]=Database+Design&courses[4][Code]=DB42000&courses[4][Credits]=14&courses[4][Description]=A+guide+to+database+design&courses[4][Duration]=10&courses[4][__v]=0&courses[4][Faculty]=Faculty+of+Engineering",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"session",
+								"getmysessions"
+							],
+							"query": [
+								{
+									"key": "courses[0][_id]",
+									"value": "65e9c7dd1e77b44666b728a2"
+								},
+								{
+									"key": "courses[0][Name]",
+									"value": "Computer+Networks"
+								},
+								{
+									"key": "courses[0][Code]",
+									"value": "CN4569"
+								},
+								{
+									"key": "courses[0][Credits]",
+									"value": "12"
+								},
+								{
+									"key": "courses[0][Description]",
+									"value": "A+Module+about+Computer+Networks"
+								},
+								{
+									"key": "courses[0][Duration]",
+									"value": "15"
+								},
+								{
+									"key": "courses[0][__v]",
+									"value": "0"
+								},
+								{
+									"key": "courses[0][Faculty]",
+									"value": "Faculty+of+Computing"
+								},
+								{
+									"key": "courses[1][_id]",
+									"value": "65e9c45f621810b1188a5992"
+								},
+								{
+									"key": "courses[1][Name]",
+									"value": "Mobile+Apps"
+								},
+								{
+									"key": "courses[1][Code]",
+									"value": "MA004"
+								},
+								{
+									"key": "courses[1][Credits]",
+									"value": "16"
+								},
+								{
+									"key": "courses[1][Description]",
+									"value": "A+mobile+application+course"
+								},
+								{
+									"key": "courses[1][Duration]",
+									"value": "40"
+								},
+								{
+									"key": "courses[1][__v]",
+									"value": "0"
+								},
+								{
+									"key": "courses[1][Faculty]",
+									"value": "Faculty+of+Business"
+								},
+								{
+									"key": "courses[2][_id]",
+									"value": "65e9c6191e77b44666b72893"
+								},
+								{
+									"key": "courses[2][Name]",
+									"value": "Cyber+Scequrity"
+								},
+								{
+									"key": "courses[2][Code]",
+									"value": "CS0005"
+								},
+								{
+									"key": "courses[2][Credits]",
+									"value": "20"
+								},
+								{
+									"key": "courses[2][Description]",
+									"value": "A+module+about+Cyber+Protection"
+								},
+								{
+									"key": "courses[2][Duration]",
+									"value": "30"
+								},
+								{
+									"key": "courses[2][__v]",
+									"value": "0"
+								},
+								{
+									"key": "courses[2][Faculty]",
+									"value": "Faculty+of+Computing"
+								},
+								{
+									"key": "courses[3][_id]",
+									"value": "65e9c63f1e77b44666b72898"
+								},
+								{
+									"key": "courses[3][Name]",
+									"value": "Application+Framework"
+								},
+								{
+									"key": "courses[3][Code]",
+									"value": "AF5506"
+								},
+								{
+									"key": "courses[3][Credits]",
+									"value": "10"
+								},
+								{
+									"key": "courses[3][Description]",
+									"value": "Application+and+their+Frameworks"
+								},
+								{
+									"key": "courses[3][Duration]",
+									"value": "25"
+								},
+								{
+									"key": "courses[3][__v]",
+									"value": "0"
+								},
+								{
+									"key": "courses[3][Faculty]",
+									"value": "Faculty+of+Business"
+								},
+								{
+									"key": "courses[4][_id]",
+									"value": "65e9c8901e77b44666b728b0"
+								},
+								{
+									"key": "courses[4][Name]",
+									"value": "Database+Design"
+								},
+								{
+									"key": "courses[4][Code]",
+									"value": "DB42000"
+								},
+								{
+									"key": "courses[4][Credits]",
+									"value": "14"
+								},
+								{
+									"key": "courses[4][Description]",
+									"value": "A+guide+to+database+design"
+								},
+								{
+									"key": "courses[4][Duration]",
+									"value": "10"
+								},
+								{
+									"key": "courses[4][__v]",
+									"value": "0"
+								},
+								{
+									"key": "courses[4][Faculty]",
+									"value": "Faculty+of+Engineering"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Sessions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/session/getsessions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"session",
+								"getsessions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Session",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/session/deletesessions/id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"session",
+								"deletesessions",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a new Session",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"Course\": \"JS004 Java Scripts\",\r\n        \"Date\": \"2024-03-20\",\r\n        \"StartTime\": \"12:58\",\r\n        \"EndTime\": \"12:59\",\r\n        \"Faculty\": \"Faculty of Computing\",\r\n        \"Location\": \"ClassRoom 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/session/addsession",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"session",
+								"addsession"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Session",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/session/updatesessions/id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"session",
+								"updatesessions",
+								"id"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notifications",
+			"item": [
+				{
+					"name": "Get All Notifications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/session/notifications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"session",
+								"notifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Notification",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/session/deleteNotification",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"session",
+								"deleteNotification"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
